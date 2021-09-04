@@ -16,10 +16,10 @@ async function imageShortcode(src, alt) {
   if(alt === undefined) {
     // Throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`)
-  }  
+  }
   let metadata = await Image(src, {
-    widths: [600, 900, 1500],
-    formats: ['webp', 'jpeg'],
+    widths: [300, 600, 900, 1500, 3000],
+    formats: ['avif', 'webp', 'jpeg'],
     urlPath: "/images/",
     outputDir: "./_site/images/",
     filenameFormat: function (id, src, width, format, options) {
@@ -27,7 +27,7 @@ async function imageShortcode(src, alt) {
       const name = path.basename(src, extension)
       return `${name}-${width}w.${format}`
     }
-  })  
+  })
   let lowsrc = metadata.jpeg[0]
   let highsrc = metadata.jpeg[metadata.jpeg.length - 1]
   return `<picture>
@@ -45,7 +45,7 @@ async function imageShortcode(src, alt) {
 }
 
 module.exports = function(eleventyConfig) {
-  
+
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
   eleventyConfig.addLiquidShortcode("image", imageShortcode)
   // === Liquid needed if `markdownTemplateEngine` **isn't** changed from Eleventy default
@@ -176,7 +176,7 @@ module.exports = function(eleventyConfig) {
   })
 
   /* === END, prev/next posts stuff === */
-  
+
   /* pathPrefix: "/"; */
   return {
     dir: {

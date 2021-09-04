@@ -15,6 +15,11 @@ featured_image_caption: "Image: rwelborn; Pixabay" # Quotation marks allow colon
 
 Your opening text goes here.
 
+An expensive business jet. Got a spare $75 million?
+
+{% image "G700.jpg", "An expensive jet" %}
+
+
 ## In-article heading --- it's an H2 because your title is the H1
 
 And after another paragraph or two or three, you may want to add a *subheading*, which would be an H3, so it would be like the following.[^fnExample]
@@ -31,8 +36,8 @@ Maybe you want a code block to illustrate something. Here's one:
 ```js
 
 /* =========
-This is some simple JavaScript, 
-just so you can see how Eleventy handles 
+This is some simple JavaScript,
+just so you can see how Eleventy handles
 a code block (with the help of PrismJS).
 It doesn't **do** anything here, of course.
 Helpful on a dev blog, eh?
@@ -44,7 +49,7 @@ for(i = 0; i < 10; i++) {
   console.log(j)
 }
 
-/* ========= 
+/* =========
 When run, the above would output:
 
 0
