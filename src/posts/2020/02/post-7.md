@@ -19,6 +19,8 @@ An expensive business jet. Got a spare $75 million?
 
 {% image "G700.jpg", "An expensive jet" %}
 
+Another image
+![a yummy sandwich](https://ik.imagekit.io/milliard87/hillshire-farm_xWHvhCbGPb.jpg?updatedAt=1633899901965)
 
 ## In-article heading --- it's an H2 because your title is the H1
 
